@@ -7,10 +7,11 @@ class Game {
   int count=0;
   int sumguesses =0;
   var maxRandom;
+  static const defultmaxrandom = 100;
 
-  Game(var maxRd) {
-    maxRandom = maxRd;
-    answer = r.nextInt(maxRandom!) + 1;
+  Game({int maxRd=defultmaxrandom}) {
+
+    answer = r.nextInt(maxRd) + 1;
     print('Answer is $answer');
   }
   int doGuess(int num) {

@@ -9,9 +9,10 @@ void main () {
   stdout.write('⤷ ENTER MAXIMUM NAMBER TO RANDOM : ');
 
   var inputmaxRandom = stdin.readLineSync();
+
   var maxRandom = int.tryParse(inputmaxRandom!);
 
-  var game = Game(maxRandom);
+  var game = Game(maxRd: 100);
   var count = 0;
 
   print('╔═══════════════════════════════════════════════════╗');
@@ -19,7 +20,9 @@ void main () {
   print('╠═══════════════════════════════════════════════════╣');
 
   do {
-    print('║      Please guess the number between 1 - $maxRandom          ');
+    print('║            Please guess the number           ');
+
+
     stdout.write('║                       ');
     var input = stdin.readLineSync();
     var guess = int.tryParse(input!);
@@ -51,7 +54,7 @@ void main () {
       stdout.write('⤷ ENTER MAXIMUM NAMBER TO RANDOM : ');
       var inputmaxRandom = stdin.readLineSync();
       var maxRandom = int.tryParse(inputmaxRandom!);
-      var game = Game(maxRandom!);
+      var game = Game(maxRd: 100);
 
 
       print('╔═══════════════════════════════════════════════════╗');
@@ -59,9 +62,10 @@ void main () {
       print('╠═══════════════════════════════════════════════════╣');
 
 
+
       do {
         print(
-            '║      Please guess the number between 1 - $maxRandom          ');
+            '║            Please guess the number           ');
         stdout.write('║                       ');
 
 
@@ -89,7 +93,6 @@ void main () {
         print(' 🏆 Game # ' + myList[i].toString() + ' : '+myList1[i].toString() +'');
       }
       print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-
       break;
     } else if (str == null) {
       print('Play again(Y/N):');
